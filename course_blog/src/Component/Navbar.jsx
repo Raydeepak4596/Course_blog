@@ -1,38 +1,36 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import '../App.css'
+import {Menu} from '@mui/icons-material';
 import {AppBar, Box, Button, Container, Divider, List, ListItemButton, Toolbar, Typography} from '@mui/material'
 const Navbar = () => {
+    
   return (
     <>
    
       <AppBar position='sticky'>
-        <Toolbar>
-           <Typography flexGrow={1}><h2>Blog</h2></Typography>
+        <Toolbar sx={{display:'flex',justifyContent:'space-between'}}>
+           <Box  sx={{display:{xs:'none',sm:'block' }}}><Typography ><h2>Blog</h2></Typography></Box>
+           <Menu sx={{display:{xs:'block' , sm:'none'}}}/>
+          
            <List sx={{display:'flex'}}>
             <ListItemButton>
-                Home
+               <Link to='/'> Home</Link>
             </ListItemButton>
-            <ListItemButton>
-                About
+            <ListItemButton> 
+            <Link to='/about'>    About</Link>
             </ListItemButton>
             <ListItemButton>
                 Project
             </ListItemButton>
             <ListItemButton>
-                Contact
+               <Link to='/contact'> Contact</Link>
             </ListItemButton>
            </List>
         </Toolbar>
         
       </AppBar>
-      <Toolbar>
-       <Container>
-       <h1>Read Our Latest Blog</h1>
-       <p>
-       "Unlock the full potential of web development with our expert guides, tips, and tutorials, designed to elevate your skills 
-       and ensure a successful future in the dynamic digital world."</p>
-       <Divider/>
-       </Container>
-      </Toolbar>
+     
     </>
   )
 }
