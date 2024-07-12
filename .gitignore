@@ -1,0 +1,11 @@
+# Ignore node_modules directory in Frontend and Backend
+course_blog/node_modules/
+Server/node_modules/
+# amin_dashboard/node_modules/
+
+# Ignore build directories
+
+# Ignore environment files
+
+#Backend/.env
+
