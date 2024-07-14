@@ -108,20 +108,36 @@ router.delete('/delete/:id', async (req, res) => {
     }
 })
 
-router.put('/updatedata/:uuid', async (req, res) => {
+// router.put('/updatedata/:uuid', async (req, res) => {
    
-    try {
-        const i=req.params.uuid
-        const {title1,description1}=req.body
-        // const ii=req.file.filename
+//     try {
+//         const i=req.params.uuid
+//         const {title1,description1}=req.body
+//         const ii=req.file.filename
       
       
-        const d_post=await post_add.findByIdAndUpdate(i,{title:title1,description:description1})
-        res.json(d_post)
-    } catch (error) {
+//         const d_post=await post_add.findByIdAndUpdate(i,{title:title1,description:description1,image:ii})
+//         res.json(d_post)
+//     } catch (error) {
         
+//     }
+// })
+
+
+router.put('/updatedata/:uuid', upload.single('image'), async (req, res) => {
+    try {
+        const id = req.params.uuid
+        const { title1, description1 } = req.body
+        const updateData = { title: title1, description: description1 }
+        if (req.file) {
+            updateData.image = req.file.filename
+        }
+        const updatedPost = await post_add.findByIdAndUpdate(id, updateData, { new: true })
+        res.json(updatedPost)
+    } catch (error) {
+        console.log(error)
+        res.status(500).json({ message: 'Internal Server Error' })
     }
 })
-
 
 export default router
