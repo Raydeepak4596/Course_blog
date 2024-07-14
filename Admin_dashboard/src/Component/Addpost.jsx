@@ -26,7 +26,7 @@ const btnadd=(e)=>{
     formdata.append('title',data.title)
     formdata.append('description',data.description)
     formdata.append('image',data.image)
-    
+ 
     axios.post(`http://localhost:4000/api/vi/addpost`,formdata)
     setdata({title:'',description:'',image:''})
     e.target.reset()
