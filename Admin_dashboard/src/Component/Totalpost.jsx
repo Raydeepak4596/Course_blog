@@ -248,7 +248,7 @@ import axios from 'axios';
                             <Box>
                                 <form onSubmit={handleSubmitUpdate} style={{ width: '100%' }}>
                                     <InputBase
-                                        placeholder="Title"
+                                        placeholder=" Title"
                                         name="title1"
                                         value={formData.title1}
                                         sx={{ mb: 2, width: '100%', p: 1, border: '1px solid #ccc', borderRadius: '4px' }}
