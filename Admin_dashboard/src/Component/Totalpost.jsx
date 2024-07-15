@@ -301,8 +301,8 @@ const Totalpost = () => {
               <Box>
                 <ListItem>
                   <ListItemText
-                    primary={post.title}
-                    secondary={post.description}
+                    primary={post.title.slice(0,30)}
+                    secondary={post.description.slice(0,50)+"..."}
                   />
                   <ListItemSecondaryAction>
                     <Button

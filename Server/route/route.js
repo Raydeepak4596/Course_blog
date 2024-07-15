@@ -140,4 +140,22 @@ router.put('/updatedata/:uuid', upload.single('image'), async (req, res) => {
     }
 })
 
+
+
+router.get('/calldata', async (req, res) => {
+   
+    try {
+        const d_post=await post_add.find()
+        res.json(d_post)
+    } catch (error) {
+        
+    }
+})
+
+
+
+
+
 export default router
+
+
