@@ -36,7 +36,8 @@ const backmove=()=>{
               {dataa.title}
             </Typography>
             <Typography mt={2} variant="body2" color="textSecondary">
-              {dataa.description}
+              {/* {dataa.description} */}
+              <div dangerouslySetInnerHTML={{ __html: dataa.description }} />
             </Typography>
           </CardContent>
           <CardActionArea onClick={backmove} sx={{ backgroundColor: 'blue', color: 'white', padding: '0.5rem 0', textAlign: 'center' }}>
