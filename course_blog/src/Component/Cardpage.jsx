@@ -21,9 +21,10 @@ navigate(`/detailpage/${props.d._id}`,{state:{dataa:props.d}})
             <Typography variant="h5" component="h3">
               {props.d.title.length > 50 ? props.d.title.slice(0, 50) + '...' : props.d.title}
             </Typography>
-            <Typography mt={2} variant="body2" color="textSecondary">
+            {/* { <Typography mt={2} variant="body2" color="textSecondary">
               {props.d.description.length > 100 ? props.d.description.slice(0, 100) + '...' : props.d.description}
-            </Typography>
+            </Typography> } */}
+            <div dangerouslySetInnerHTML={{ __html: props.d.description }} />
           </CardContent>
           <CardActionArea onClick={movetonextpage} sx={{ backgroundColor: 'blue', color: 'white', padding: '0.5rem 0', textAlign: 'center' }}>
             Read More

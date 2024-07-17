@@ -16,7 +16,9 @@ const Dashboard = () => {
         flexDirection: 'column', 
         alignItems: 'center' 
       }}>
-        <Avatar sx={{ width: 56, height: 56, mb: 2 }} />
+        <Avatar sx={{ width: 56, height: 56, mb: 2 }}  component='image' src='https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg
+
+'/>
         <Typography variant="h6">Deepak Kumar</Typography>
         <Divider sx={{ width: '100%', my: 2 }} />
         <List component="nav" sx={{ width: '100%' }}>

@@ -64,12 +64,13 @@ import Cardpage from '../Component/Cardpage'
 import axios from 'axios'
 
 const Home = () => {
+  
+
   const [data, setData] = useState('')
 
   const calldatame = async () => {
     const p = await axios.get(`http://localhost:4000/api/vi/calldata`)
-    console.log(p.data)
-    setData(p.data)
+ setData(p.data)
   }
   useEffect(() => {
     calldatame()

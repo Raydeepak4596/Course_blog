@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios'
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
-import DOMPurify from 'dompurify';
+
 
 const Addpost = () => {
   const [data, setdata] = useState({
@@ -39,8 +39,7 @@ const Addpost = () => {
   }
 
   const handledatadescription = (e) => {
-    const sanitizedDescription = DOMPurify.sanitize(e);
-    setdata({ ...data, description: sanitizedDescription });
+    setdata({ ...data, description: e });
   }
   return (
     <Box
