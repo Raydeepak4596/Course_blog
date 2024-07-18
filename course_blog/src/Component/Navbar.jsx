@@ -20,7 +20,7 @@ const Navbar = () => {
       <AppBar position='sticky'>
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            <Typography variant="h4">Blog</Typography>
+          <Link  to='/'>  <Typography variant="h4">Blog</Typography></Link>
           </Box>
           <Menu onClick={handleDrawerOpen} sx={{ display: { xs: 'block', sm: 'none' } }} />
           <List sx={{ display: { xs: 'none', sm: 'flex' } }}>
